@@ -1,0 +1,190 @@
+/* Define light and dark theme colors */
+:root {
+    --light-background: #ffffff;
+    --light-text: #333333;
+    --light-border: #cccccc;
+    --dark-background: #333333;
+    --dark-text: #ffffff;
+    --dark-border: #555555;
+  }
+  
+  /* Default theme: light */
+  body {
+    background-color: var(--light-background);
+    color: var(--light-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--light-border);
+    border-radius: 5px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid var(--light-border);
+    border-radius: 3px;
+  }
+  
+  form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--light-border);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--light-text);
+    transition: background-color 0.2s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: var(--light-text);
+    color: var(--light-background);
+  }
+  
+  #error-message {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .success-message,
+  .error-message {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .success-message {
+    color: green;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  /* Modern navigation menu styles */
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu .menu-items {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .nav-menu a:hover {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .nav-menu .active {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  /* Last login information bar styles */
+  .login-info-bar {
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--dark-background);
+      color: var(--dark-text);
+    }
+  
+    form {
+      border-color: var(--dark-border);
+    }
+  
+    form input[type="text"],
+    form input[type="text"],
+    form input[type="password"] {
+      border-color: var(--dark-border);
+    }
+  
+    form input[type="submit"] {
+      background-color: var(--dark-border);
+      color: var(--dark-text);
+    }
+  
+    form input[type="submit"]:hover {
+      background-color: var(--dark-text);
+      color: var(--dark-background);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-menu .menu-items {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+  
+    .nav-menu a {
+      width: 100%;
+      text-align: center;
+    }
+  
+    form {
+      padding: 20px 10px;
+    }
+  
+    form input[type="text"],
+    form input[type="password"] {
+      font-size: 14px;
+    }
+  
+    form input[type="submit"] {
+      font-size: 14px;
+    }
+  
+    .login-info-bar {
+      font-size: 14px;
+    }
+  }
+  
+  
